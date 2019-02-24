@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 
 def main(argv):
     i = 1
@@ -8,6 +9,7 @@ def main(argv):
     data = {}
     data["vertex"] = []
     data["edge"] = []
+    data["guards"] = []
     while(True):
         print "Please enter the " + str(i) + " way point in format 'wp_x:wp_y'. "
         print "If not, please press 'N'"
@@ -22,9 +24,19 @@ def main(argv):
             continue
         data["vertex"].append(wp_prev + " " + wp)
         data["edge"].append([i-2, i-1])
+        x = int(wp.split(":")[0])
+        y = int(wp.split(":")[1])
+        data["guards"].append("And(x>="+str(x-5)+", x<="+str(x+5)+", y>="+str(y-5)+", y<="+str(y+5)+")")
+        
         wp_prev = wp
         i += 1
     
+    if len(data["vertex"]) <= 1:
+        print "input at least two waypoints"
+        exit()
+    data["guards"].pop()
+    data["edge"].pop()
+    assert len(data["guards"]) == len(data["edge"])
     print "Please enter the initial set in format 'v, psi, x, y': "
     initialSet_input = raw_input().split(",")
     initialSet = []
@@ -35,6 +47,7 @@ def main(argv):
         initialSetUpper.append(float(num.strip())+0.1)
     initialSet.append(initialSetBottom)
     initialSet.append(initialSetUpper)
+    data["variables"] = ["v", "psi", "x", "y"]
     data["initialSet"] = initialSet
     data["unsafeSet"] = "@Allmode: x<-100"
     data["timeHorizon"] = 100.0
@@ -42,6 +55,8 @@ def main(argv):
 
     with open('aircraft.json', 'w') as outfile:
         json.dump(data, outfile)
+
+    os.system('python main.py aircraft.json')
 
 
 if __name__ == "__main__":
