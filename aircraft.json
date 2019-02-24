@@ -1,0 +1,1 @@
+{"vertex": ["22:33 11:33", "11:33 44:55"], "timeHorizon": 100.0, "edge": [[0, 1], [1, 2]], "directory": "examples/aircraft", "unsafeSet": "@Allmode: x<-100", "initialSet": [[4.0, 0.0, 0.0, 100.0], [4.1, 0.1, 0.1, 100.1]]}
