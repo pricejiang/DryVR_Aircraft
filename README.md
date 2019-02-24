@@ -2,6 +2,17 @@ DryVR 2.0 is a software for hybrid system verification. Please find the document
 
 http://dryvr-02.readthedocs.io/en/latest/
 
+
+## Note
+Added files:
+* example/aircraft/
+* input/aircraft0.json
+* aircraft_generator.py
+
+To use the input generator, simply run
+-------------------------------------------------------------
+python aircraft_generator.py
+
 Installation
 ==================
 To install the required packages, please run:
