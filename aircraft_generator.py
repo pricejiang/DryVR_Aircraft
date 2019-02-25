@@ -53,10 +53,10 @@ def main(argv):
     data["timeHorizon"] = 100.0
     data["directory"] = "examples/aircraft"
 
-    with open('aircraft.json', 'w') as outfile:
+    with open('input/aircraft/aircraft.json', 'w') as outfile:
         json.dump(data, outfile)
 
-    os.system('python main.py aircraft.json')
+    os.system('python main.py input/aircraft/aircraft.json')
 
 
 if __name__ == "__main__":

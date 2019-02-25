@@ -67,7 +67,7 @@ def TC_Simulate(Mode,initialCondition,time_bound):
     # initialCondition: initial position (v, psi, X,Y)
 
     # Setting time step
-    time_step = 0.05
+    time_step = 0.2
     time_bound = float(time_bound)
 
     number_points = int(np.ceil(time_bound/time_step))
