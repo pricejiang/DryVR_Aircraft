@@ -4,6 +4,7 @@ import os
 
 def main(argv):
     i = 1
+    epsilon = 10
     wp = ""
     wp_prev = ""
     data = {}
@@ -26,7 +27,7 @@ def main(argv):
         data["edge"].append([i-2, i-1])
         x = int(wp.split(":")[0])
         y = int(wp.split(":")[1])
-        data["guards"].append("And(x>="+str(x-5)+", x<="+str(x+5)+", y>="+str(y-5)+", y<="+str(y+5)+")")
+        data["guards"].append("And(x>="+str(x-epsilon)+", x<="+str(x+epsilon)+", y>="+str(y-epsilon)+", y<="+str(y+epsilon)+")")
         
         wp_prev = wp
         i += 1
