@@ -81,10 +81,16 @@ def read_data(traces):
 def A_calc(traces):
     global trace_len
     trace = traces[0]
+    if len(traces) == 0:
+        print "======= At line 85, traces is empty ======="
     A = []
     for i in range(trace_len-1):
         A.append([-1, -(trace[i+1][0]-trace[0][0])])  # [-1, -(t(i+1)-t0)]
 
+    if len(A) == 0:
+        print "======= At line 91, A is empty, and trace_len is ", trace_len, "======="
+        print "traces is ", traces
+        print "length is ", len(traces)
     # write A matrix to file
     # with open('./A.txt', 'w') as write_file:
     #     for i in range(len(A)):
@@ -196,6 +202,8 @@ def k_gamma_calc(A, b, c):
 
 def Global_Discrepancy(Mode, init_delta_array, plot_flag, plot_dim,traces):
     global dimensions
+    if len(traces) == 0:
+        print "At line 200, traces is []"
     read_data(traces)
 
     # The returned value

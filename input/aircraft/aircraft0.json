@@ -9,6 +9,6 @@
 	],
 	"initialSet":[[4.0, 0.0, 0.0, 100.0],[4.1, 0.1, 0.1, 100.1]],
 	"unsafeSet":"@Allmode:And(x<-100)",
-	"timeHorizon":100.0,
+	"timeHorizon":300.0,
 	"directory":"examples/aircraft"
 }

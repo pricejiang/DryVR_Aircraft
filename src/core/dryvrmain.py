@@ -106,7 +106,7 @@ def verify(data, simFunction, paramConfig={}):
     else:
         initialVertex = params.initialVertex
 
-    # Build the initial set stack
+    # Build the initial set sgtack
     curModeStack = InitialSetStack(initialVertex, userConfig.REFINETHRES, params.timeHorizon)
     curModeStack.stack.append(InitialSet(params.initialSet[0], params.initialSet[1]))
     curModeStack.bloatedTube.append(buildModeStr(graph, initialVertex))
@@ -200,6 +200,8 @@ def verify(data, simFunction, paramConfig={}):
                     curBloatedTube,
                     curGuardStr,
                 )
+
+                print "nextInit", nextInit
 
                 
                 if nextInit == None:

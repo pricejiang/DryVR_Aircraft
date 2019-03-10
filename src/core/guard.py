@@ -189,5 +189,5 @@ class Guard():
                     initUpper[k-1] = max(initUpper[k-1], guardSetUpper[j][k])
             # Return next initial Set, the result tube, and the true transit time
             return [initLower,initUpper], tube[:i], guardSetLower[0][0]
-
+        print "Tube: ", tube
         return None, tube, tube[-1][0]

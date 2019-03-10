@@ -4,7 +4,7 @@ import os
 
 def main(argv):
     i = 1
-    epsilon = 10
+    epsilon = 1
     wp = ""
     wp_prev = ""
     data = {}
@@ -50,8 +50,8 @@ def main(argv):
     initialSet.append(initialSetUpper)
     data["variables"] = ["v", "psi", "x", "y"]
     data["initialSet"] = initialSet
-    data["unsafeSet"] = "@Allmode: x<-100"
-    data["timeHorizon"] = 100.0
+    data["unsafeSet"] = "@Allmode: x<-10000"
+    data["timeHorizon"] = 200.0
     data["directory"] = "examples/aircraft"
 
     with open('input/aircraft/aircraft.json', 'w') as outfile:

@@ -67,7 +67,7 @@ def TC_Simulate(Mode,initialCondition,time_bound):
     # initialCondition: initial position (v, psi, X,Y)
 
     # Setting time step
-    time_step = 0.2
+    time_step = 0.05
     time_bound = float(time_bound)
 
     number_points = int(np.ceil(time_bound/time_step))
@@ -109,7 +109,7 @@ def TC_Simulate(Mode,initialCondition,time_bound):
 
     # Construct the final output
     trace = []
-    for j in range(min_in+1):
+    for j in range(len(t)):
         tmp = []
         tmp.append(t[j])
         tmp.append(float(sol[j,0]))
