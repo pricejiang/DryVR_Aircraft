@@ -40,10 +40,10 @@
       <invariant equation="x&lt;425&amp;&amp;y&lt;404"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;128&amp;&amp;x&lt;138&amp;&amp;y&gt;187&amp;&amp;y&lt;197">
+        <guard equation="x&gt;128&amp;&amp;x&lt;138&amp;&amp;y&gt;187&amp;&amp;y&lt;197"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;171&amp;&amp;x&lt;181&amp;&amp;y&gt;234&amp;&amp;y&lt;244">
+        <guard equation="x&gt;171&amp;&amp;x&lt;181&amp;&amp;y&gt;234&amp;&amp;y&lt;244"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
