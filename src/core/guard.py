@@ -154,27 +154,33 @@ class Guard():
             curSolver.push()
             lowerBound = tube[i]
             upperBound = tube[i+1]
+            # print "At line 157 guard.py, lowerBound: ", lowerBound, ", upperBound: ", upperBound
             for symbol in symbols:
                 curSolver.add(self.varDic[symbol] >= lowerBound[symbols[symbol]])
                 curSolver.add(self.varDic[symbol] <= upperBound[symbols[symbol]])
-
             if curSolver.check() == sat:
                 # The reachtube hits the guard
+                print "Tube is a subset of the guard"
                 curSolver.pop()
                 guardSetLower.append(lowerBound)
                 guardSetUpper.append(upperBound)
             else:
+                print "Tube ISNOT subset of the guard"
+                print "At line 157 guard.py, lowerBound: ", lowerBound, ", upperBound: ", upperBound
                 curSolver.pop()
                 if guardSetLower:
+                    print "guardSetLower is true"
                     # Guard set is not empty, build the next initial set and return
                     # At some point we might futher reduce the initial set for next mode
                     initLower = guardSetLower[0][1:]
                     initUpper = guardSetUpper[0][1:]
+                    #print "initLower at guard.py 173", initLower
                     for j in range(1,len(guardSetLower)):
                         for k in range(1,len(guardSetLower[0])):
                             initLower[k-1] = min(initLower[k-1], guardSetLower[j][k])
                             initUpper[k-1] = max(initUpper[k-1], guardSetUpper[j][k])
                     # Return next initial Set, the result tube, and the true transit time
+                    #print "initLower in guard.py 178", initLower
                     return [initLower,initUpper], tube[:i], guardSetLower[0][0]
 
         # Construct the guard if all later trace sat the guard condition
@@ -183,11 +189,13 @@ class Guard():
             # At some point we might futher reduce the initial set for next mode
             initLower = guardSetLower[0][1:]
             initUpper = guardSetUpper[0][1:]
+            print "initLower at guard.py 188", initLower
+            # print "guardSetLower at guard.py 189", guardSetLower
             for j in range(1,len(guardSetLower)):
                 for k in range(1,len(guardSetLower[0])):
                     initLower[k-1] = min(initLower[k-1], guardSetLower[j][k])
                     initUpper[k-1] = max(initUpper[k-1], guardSetUpper[j][k])
             # Return next initial Set, the result tube, and the true transit time
+            print "initLower in guard.py 192", initLower
             return [initLower,initUpper], tube[:i], guardSetLower[0][0]
-        print "Tube: ", tube
         return None, tube, tube[-1][0]

@@ -355,7 +355,7 @@ def bloatToTube(mode, k, gamma, init_delta_array, traces):
     read_data(traces)
     center_trace = traces[0]
     reach_tube = []
-
+    # print "At Global_Disc.py 358, center_trace: ", center_trace
     for i in range(trace_len-1):
         time_interval = center_trace[i+1][0] - center_trace[0][0]
         lower_rec = [center_trace[i][0]]

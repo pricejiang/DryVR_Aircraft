@@ -51,7 +51,7 @@ def main(argv):
     data["variables"] = ["v", "psi", "x", "y"]
     data["initialSet"] = initialSet
     data["unsafeSet"] = "@Allmode: x<-10000"
-    data["timeHorizon"] = 200.0
+    data["timeHorizon"] = 100.0
     data["directory"] = "examples/aircraft"
 
     with open('input/aircraft/aircraft.json', 'w') as outfile:

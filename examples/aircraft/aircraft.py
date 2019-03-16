@@ -109,7 +109,7 @@ def TC_Simulate(Mode,initialCondition,time_bound):
 
     # Construct the final output
     trace = []
-    for j in range(len(t)):
+    for j in range(min_in+1):
         tmp = []
         tmp.append(t[j])
         tmp.append(float(sol[j,0]))
@@ -118,7 +118,7 @@ def TC_Simulate(Mode,initialCondition,time_bound):
         tmp.append(float(sol[j,3]))
         trace.append(tmp)
 
-    return trace#, [v, psi, x, y]
+    return trace #, [v, psi, x, y]
 
 
 if __name__ == "__main__":
@@ -127,7 +127,7 @@ if __name__ == "__main__":
     WP_y = array([-20, 192, 239, 409, 100])
     Init = [4.0, 0, 0, 100]
     for i in range(4):
-        sol = TC_Simulate(WP[i], Init, 100.0)
+        sol, Init = TC_Simulate(WP[i], Init, 200.0)
 
         time = [row[0] for row in sol]
 

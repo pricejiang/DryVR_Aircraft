@@ -201,7 +201,7 @@ def verify(data, simFunction, paramConfig={}):
                     curGuardStr,
                 )
 
-                print "nextInit", nextInit
+                # print "nextInit", nextInit
 
                 
                 if nextInit == None:
