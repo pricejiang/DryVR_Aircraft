@@ -7,8 +7,8 @@
     <variable scope="LOCAL_DATA" type="Real" name="x"/>
     <variable scope="LOCAL_DATA" type="Real" name="y"/>
     <mode initial="True" id="0" name="WayPoint1">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.5934 - psi))"/>
+      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.5934 - psi)) + 0.001 * sqrt( (x-(-10)*(x-(-10))+(y-(-20)*(y-(-20)) ) * sin(arccos( (-0.55920418*(x-(-10) + (-0.82902997)*(y-(-20)))/sqrt( (x-(-10)*(x-(-10))+(y-(-20)*(y-(-20)) ) ))"/>
       <dai equation="x_dot = v*cos(1.57 - psi)"/>
       <dai equation="y_dot = v*sin(1.57 - psi)"/>
       <dai equation="v_out = v"/>
@@ -18,8 +18,8 @@
       <invariant equation="x&lt;128"/>
     </mode>
     <mode initial="False" id="1" name="WayPoint2">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.7410 - psi))"/>
+      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.7410 - psi)) + 0.001 * sqrt( (x-133)*(x-133)+(y-192)*(y-192) ) * sin(arccos( (-0.67501346*(x-133)+(-0.73780541)*(y-192))/sqrt( (x-133)*(x-133)+(y-192)*(y-192) ) ))"/>
       <dai equation="x_dot = v*cos(1.57 - psi)"/>
       <dai equation="y_dot = v*sin(1.57 - psi)"/>
       <dai equation="v_out = v"/>
@@ -29,8 +29,8 @@
       <invariant equation="x&lt;171"/>
     </mode>
     <mode initial="False" id="2" name="WayPoint3">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.9810 - psi))"/>
+      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.9810 - psi)) + 0.001 * sqrt( (x-176)*(x-176)+(y-239)*(y-239) ) * sin(arccos( (-0.83104221*(x-176)+(-0.55620935)*(y-239))/sqrt( (x-176)*(x-176)+(y-239)*(y-239) ) ))"/>
       <dai equation="x_dot = v*cos(1.57 - psi)"/>
       <dai equation="y_dot = v*sin(1.57 - psi)"/>
       <dai equation="v_out = v"/>
@@ -40,10 +40,10 @@
       <invariant equation="x&lt;425"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;128&amp;&amp;x&lt;138&amp;&amp;y&gt;187&amp;&amp;y&lt;197"/>
+        <guard equation="x&gt;128.0&amp;&amp;x&lt;138.0&amp;&amp;y&gt;187.0&amp;&amp;y&lt;197.0"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;171&amp;&amp;x&lt;181&amp;&amp;y&gt;234&amp;&amp;y&lt;244"/>
+        <guard equation="x&gt;171.0&amp;&amp;x&lt;181.0&amp;&amp;y&gt;234.0&amp;&amp;y&lt;244.0"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
