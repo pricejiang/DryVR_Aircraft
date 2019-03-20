@@ -47,7 +47,7 @@
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
-  <property initialSet="WayPoint1: v&gt;4.0&amp;&amp;v&lt;4.1&amp;&amp;psi&gt;0.0&amp;&amp;psi&lt;0.1&amp;&amp;x&gt;0.0&amp;&amp;x&lt;0.1&amp;&amp;y&gt;100.0&amp;&amp;y&lt;100.1" type="0" name="P1" unsafeSet="x&lt;-100">
+  <property initialSet="WayPoint1: v&gt;4.0&amp;&amp;v&lt;4.1&amp;&amp;psi&gt;0.0&amp;&amp;psi&lt;0.1&amp;&amp;x&gt;0.0&amp;&amp;x&lt;0.1&amp;&amp;y&gt;10.0&amp;&amp;y&lt;10.1" type="0" name="P1" unsafeSet="x&lt;-100">
     <parameters kvalue="2000.0" timehorizon="100.0" timestep="0.1"/>
   </property>
 </hyxml>
