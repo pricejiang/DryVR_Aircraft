@@ -8,7 +8,7 @@
     <variable scope="LOCAL_DATA" type="Real" name="y"/>
     <mode initial="True" id="0" name="WayPoint1">
       <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.5934 - psi)) + 0.001 * sqrt( (x-(-10)*(x-(-10))+(y-(-20)*(y-(-20)) ) * sin(arccos( (-0.55920418*(x-(-10) + (-0.82902997)*(y-(-20)))/sqrt( (x-(-10)*(x-(-10))+(y-(-20)*(y-(-20)) ) ))"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.5934 - psi)) + 0.001 * sqrt( (x-(-10))*(x-(-10))+(y-(-20))*(y-(-20)) ) * sin(arccos( (-0.55920418*(x-(-10)) + (-0.82902997)*(y-(-20)))/sqrt( (x-(-10))*(x-(-10))+(y-(-20))*(y-(-20)) ) ))"/>
       <dai equation="x_dot = v*cos(1.57 - psi)"/>
       <dai equation="y_dot = v*sin(1.57 - psi)"/>
       <dai equation="v_out = v"/>
