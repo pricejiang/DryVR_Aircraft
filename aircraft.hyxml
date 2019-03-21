@@ -52,7 +52,7 @@
     <transition source="1" destination="2" id="1">
         <guard equation="x&gt;166"/>
     </transition>
-    <transition source="2" destination="3" id="1">
+    <transition source="2" destination="3" id="2">
         <guard equation="x&gt;420"/>
     </transition>
   </automaton>

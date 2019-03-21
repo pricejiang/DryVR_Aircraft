@@ -15,7 +15,6 @@
       <dai equation="psi_out = psi"/>
       <dai equation="x_out = x"/>
       <dai equation="y_out = y"/>
-      <invariant equation="x&lt;30"/>
     </mode>
     <mode initial="False" id="1" name="WayPoint2">
       <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
@@ -26,7 +25,6 @@
       <dai equation="psi_out = psi"/>
       <dai equation="x_out = x"/>
       <dai equation="y_out = y"/>
-      <invariant equation="x&lt;80"/>
     </mode>
     <mode initial="False" id="2" name="WayPoint3">
       <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
@@ -37,17 +35,16 @@
       <dai equation="psi_out = psi"/>
       <dai equation="x_out = x"/>
       <dai equation="y_out = y"/>
-      <invariant equation="x&lt;150"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;75&amp;&amp;x&lt;85&amp;&amp;y&gt;65&amp;&amp;y&lt;75"/>
+        <guard equation="x&gt;75"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;145&amp;&amp;x&lt;155&amp;&amp;y&gt;105&amp;&amp;y&lt;115"/>
+        <guard equation="x&gt;145"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
-  <property initialSet="WayPoint1: v&gt;4.0&amp;&amp;v&lt;4.1&amp;&amp;psi&gt;0.0&amp;&amp;psi&lt;0.1&amp;&amp;x&gt;10.0&amp;&amp;x&lt;10.1&amp;&amp;y&gt;20.0&amp;&amp;y&lt;20.1" type="0" name="P2" unsafeSet="x&lt;-1000">
-    <parameters kvalue="2000.0" timehorizon="100.0" timestep="0.1"/>
+  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==0.1&amp;&amp;x&gt;10.0&amp;&amp;x&lt;10.1&amp;&amp;y&gt;20.0&amp;&amp;y&lt;20.1" type="0" name="P2" unsafeSet="x&lt;-1000">
+    <parameters kvalue="2000.0" timehorizon="150.0" timestep="0.1"/>
   </property>
 </hyxml>
