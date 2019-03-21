@@ -36,11 +36,24 @@
       <dai equation="x_out = x"/>
       <dai equation="y_out = y"/>
     </mode>
+    <mode initial="False" id="3" name="WayPoint4">
+      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.8961 - psi))"/>
+      <dai equation="x_dot = v*cos(1.57 - psi)"/>
+      <dai equation="y_dot = v*sin(1.57 - psi)"/>
+      <dai equation="v_out = v"/>
+      <dai equation="psi_out = psi"/>
+      <dai equation="x_out = x"/>
+      <dai equation="y_out = y"/>
+    </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;75"/>
+        <guard equation="x&gt;70"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;145"/>
+        <guard equation="x&gt;140"/>
+    </transition>
+     <transition source="2" destination="3" id="2">
+        <guard equation="x&gt;190"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
