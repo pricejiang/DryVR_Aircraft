@@ -38,7 +38,7 @@
     </mode>
     <mode initial="False" id="3" name="WayPoint4">
       <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(4.570491 - psi) + 0.0001*( pow( ((0.98994949(y-80)-(0.14142136)*(x-250) )*(0.98994949*(y-80)-(0.14142136)*(x-250))), 0.5 ) ) )"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(4.570491 - psi) + 0.0001*( pow( ((0.98994949*(y-80)-(0.14142136)*(x-250) )*(0.98994949*(y-80)-(0.14142136)*(x-250))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
