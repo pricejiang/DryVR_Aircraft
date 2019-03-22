@@ -28,7 +28,7 @@
     </mode>
     <mode initial="False" id="2" name="WayPoint3">
       <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.980979-psi)+0.001*( pow( ((-0.83104221*(y-239)-(-0.55620935)*(x-176))*(-0.83104221*(y-239)-(-0.55620935)*(x-176))), 0.5 ) ) )"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.980979-psi)+0.0001*( pow( ((-0.83104221*(y-239)-(-0.55620935)*(x-176))*(-0.83104221*(y-239)-(-0.55620935)*(x-176))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -38,7 +38,7 @@
     </mode>
     <mode initial="False" id="3" name="WayPoint4">
       <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.04968*(2.996978-psi)+0.001*( pow( ((-0.1441109*(y-409)-(0.98956154)*(x-430))*(-0.1441109*(y-409)-(0.98956154)*(x-430))), 0.5 ) ) )"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.04968*(2.996978-psi)+0.0001*( pow( ((-0.1441109*(y-409)-(0.98956154)*(x-430))*(-0.1441109*(y-409)-(0.98956154)*(x-430))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>

@@ -47,13 +47,13 @@
       <dai equation="y_out = y"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;75"/>
+        <guard equation="x&gt;75.0"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;145"/>
+        <guard equation="x&gt;145.0"/>
     </transition>
     <transition source="2" destination="3" id="2">
-        <guard equation="x&gt;295"/>
+        <guard equation="x&gt;295.0"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
