@@ -7,8 +7,8 @@
     <variable scope="LOCAL_DATA" type="Real" name="x"/>
     <variable scope="LOCAL_DATA" type="Real" name="y"/>
     <mode initial="True" id="0" name="WayPoint1">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.896055 - psi) + 0.0001*( pow( ((-0.78086881*(y-30)-(-0.62469505)*(x-30) )*(-0.78086881*(y-30)-(-0.62469505)*(x-30))), 0.5 ) ) )"/>
+      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.593425-psi)+0.0001*( pow( ((-0.55920418*(y-(-20))-(-0.82902997)*(x-(-10)) )*(-0.55920418*(y-(-20))-(-0.82902997)*(x-(-10)))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -17,8 +17,8 @@
       <dai equation="y_out = y"/>
     </mode>
     <mode initial="False" id="1" name="WayPoint2">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.051650 - psi) + 0.0001*( pow( ((-0.86824314*(y-70)-(-0.49613894)*(x-80) )*(-0.86824314*(y-70)-(-0.49613894)*(x-80))), 0.5 ) ) )"/>
+      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.740982-psi)+0.0001*( pow( ((-0.67501346*(y-192)-(-0.73780541)*(x-133))*(-0.67501346*(y-192)-(-0.73780541)*(x-133))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -27,8 +27,8 @@
       <dai equation="y_out = y"/>
     </mode>
     <mode initial="False" id="2" name="WayPoint3">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.938047 - psi) + 0.0001*( pow( ((-0.806405*(y-110)-(-0.59136366)*(x-150) )*(-0.806405*(y-110)-(-0.59136366)*(x-150))), 0.5 ) ) )"/>
+      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.980979-psi)+0.0001*( pow( ((-0.83104221*(y-239)-(-0.55620935)*(x-176))*(-0.83104221*(y-239)-(-0.55620935)*(x-176))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -37,8 +37,8 @@
       <dai equation="y_out = y"/>
     </mode>
     <mode initial="False" id="3" name="WayPoint4">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.190289 - psi) + 0.0001*( pow( ((-0.92847669*(y-220)-(-0.37139068)*(x-300) )*(-0.92847669*(y-220)-(-0.37139068)*(x-300))), 0.5 ) ) )"/>
+      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.04968*(2.996978-psi)+0.0001*( pow( ((-0.1441109*(y-409)-(0.98956154)*(x-430))*(-0.1441109*(y-409)-(0.98956154)*(x-430))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -47,17 +47,17 @@
       <dai equation="y_out = y"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;75.0"/>
+        <guard equation="x&gt;128.0"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;145.0"/>
+        <guard equation="x&gt;171.0"/>
     </transition>
     <transition source="2" destination="3" id="2">
-        <guard equation="x&gt;295.0"/>
+        <guard equation="x&gt;425.0"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
-  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==0.1&amp;&amp;x&gt;10.0&amp;&amp;x&lt;10.1&amp;&amp;y&gt;20.0&amp;&amp;y&lt;20.1" type="0" name="P2" unsafeSet="x&lt;-1000">
+  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==0.1&amp;&amp;x&gt;30.0&amp;&amp;x&lt;30.1&amp;&amp;y&gt;10.0&amp;&amp;y&lt;10.1" type="0" name="P1" unsafeSet="x&lt;-100">
     <parameters kvalue="2000.0" timehorizon="150.0" timestep="0.1"/>
   </property>
 </hyxml>
