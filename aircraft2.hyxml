@@ -28,7 +28,7 @@
     </mode>
     <mode initial="False" id="2" name="WayPoint3">
       <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.785398 - psi) + 0.001*( pow( ((-0.70710678*(y-110)-(-0.70710678)*(x-150) )*(-0.70710678*(y-110)-(-0.70710678)*(x-150))), 0.5 ) ) )"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.938047 - psi) + 0.001*( pow( ((-0.806405*(y-110)-(-0.59136366)*(x-150) )*(-0.806405*(y-110)-(-0.59136366)*(x-150))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -38,7 +38,7 @@
     </mode>
     <mode initial="False" id="3" name="WayPoint4">
       <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.134169 - psi) + 0.001*( pow( ((-0.90618314*(y-160)-(-0.42288547)*(x-200) )*(-0.90618314*(y-160)-(-0.42288547)*(x-200))), 0.5 ) ) )"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.190289 - psi) + 0.001*( pow( ((-0.92847669*(y-220)-(-0.37139068)*(x-300) )*(-0.92847669*(y-220)-(-0.37139068)*(x-300))), 0.5 ) ) )"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -53,7 +53,7 @@
         <guard equation="x&gt;145"/>
     </transition>
     <transition source="2" destination="3" id="2">
-        <guard equation="x&gt;195"/>
+        <guard equation="x&gt;295"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
