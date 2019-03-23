@@ -27,7 +27,7 @@
       <dai equation="y_out = y"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;128.0"/>
+        <guard equation="x&gt;122.0&amp;&amp;x&lt;142&amp;&amp;y&gt;182&amp;&amp;y&lt;202"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
