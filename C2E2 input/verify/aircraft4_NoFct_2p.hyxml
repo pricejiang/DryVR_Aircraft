@@ -27,11 +27,11 @@
       <dai equation="y_out = y"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;190.0&amp;&amp;x&lt;210&amp;&amp;y&gt;150&amp;&amp;y&lt;170"/>
+        <guard equation="x&gt;190.0"/>
     </transition>
   </automaton>
   <composition automata="default_automaton"/>
-  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==2.0&amp;&amp;x&gt;50.0&amp;&amp;x&lt;50.1&amp;&amp;y&gt;130.0&amp;&amp;y&lt;130.1" type="0" name="P3" unsafeSet="x&lt;-100">
+  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==2.0&amp;&amp;x&gt;50.0&amp;&amp;x&lt;50.1&amp;&amp;y&gt;130.0&amp;&amp;y&lt;130.1" type="0" name="P4" unsafeSet="x&lt;-100">
     <parameters kvalue="2000.0" timehorizon="210.0" timestep="0.1"/>
   </property>
 </hyxml>
