@@ -25,6 +25,7 @@
       <dai equation="psi_out = psi"/>
       <dai equation="x_out = x"/>
       <dai equation="y_out = y"/>
+    </mode>
     <transition source="0" destination="1" id="0">
         <guard equation="x&gt;190.0&amp;&amp;x&lt;210&amp;&amp;y&gt;150&amp;&amp;y&lt;170"/>
     </transition>
