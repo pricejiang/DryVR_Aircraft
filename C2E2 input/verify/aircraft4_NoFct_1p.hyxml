@@ -8,7 +8,7 @@
     <variable scope="LOCAL_DATA" type="Real" name="y"/>
     <mode initial="True" id="0" name="50_120">
       <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.310193 - psi))"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.831398 - psi))"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
       <dai equation="y_dot = v*sin(1.570796 - psi)"/>
       <dai equation="v_out = v"/>
@@ -16,19 +16,6 @@
       <dai equation="x_out = x"/>
       <dai equation="y_out = y"/>
     </mode>
-    <mode initial="False" id="1" name="200_160">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(2.111215 - psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
-    </mode>
-    <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;190.0&amp;&amp;x&lt;210&amp;&amp;y&gt;150&amp;&amp;y&lt;170"/>
-    </transition>
   </automaton>
   <composition automata="default_automaton"/>
   <property initialSet="50_120: v==4.0&amp;&amp;psi==2.0&amp;&amp;x&gt;50.0&amp;&amp;x&lt;50.1&amp;&amp;y&gt;130.0&amp;&amp;y&lt;130.1" type="0" name="P3" unsafeSet="x&lt;-100">

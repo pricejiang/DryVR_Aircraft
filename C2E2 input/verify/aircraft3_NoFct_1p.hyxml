@@ -6,7 +6,7 @@
     <variable scope="LOCAL_DATA" type="Real" name="psi"/>
     <variable scope="LOCAL_DATA" type="Real" name="x"/>
     <variable scope="LOCAL_DATA" type="Real" name="y"/>
-    <mode initial="True" id="0" name="WayPoint1">
+    <mode initial="True" id="0" name="50_120">
       <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
       <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.310193 - psi))"/>
       <dai equation="x_dot = v*cos(1.570796 - psi)"/>
@@ -18,7 +18,7 @@
     </mode>
   </automaton>
   <composition automata="default_automaton"/>
-  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==2.0&amp;&amp;x&gt;50.0&amp;&amp;x&lt;50.1&amp;&amp;y&gt;130.0&amp;&amp;y&lt;130.1" type="0" name="P3" unsafeSet="x&lt;-100">
+  <property initialSet="50_120: v==4.0&amp;&amp;psi==2.0&amp;&amp;x&gt;50.0&amp;&amp;x&lt;50.1&amp;&amp;y&gt;130.0&amp;&amp;y&lt;130.1" type="0" name="P3" unsafeSet="x&lt;-100">
     <parameters kvalue="2000.0" timehorizon="210.0" timestep="0.1"/>
   </property>
 </hyxml>
