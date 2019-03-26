@@ -32,6 +32,6 @@
   </automaton>
   <composition automata="default_automaton"/>
   <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==0.1&amp;&amp;x&gt;10.0&amp;&amp;x&lt;10.1&amp;&amp;y&gt;20.0&amp;&amp;y&lt;20.1" type="0" name="P2" unsafeSet="x&lt;-1000">
-    <parameters kvalue="2000.0" timehorizon="210.0" timestep="0.1"/>
+    <parameters kvalue="2000.0" timehorizon="50.0" timestep="0.01"/>
   </property>
 </hyxml>
