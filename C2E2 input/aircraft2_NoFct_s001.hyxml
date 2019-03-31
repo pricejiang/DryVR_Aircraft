@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hyxml>
+<hyxml type="Model">
+    <automaton name="default_automaton">
+    <variable scope="LOCAL_DATA" type="Real" name="v"/>
+    <variable scope="LOCAL_DATA" type="Real" name="psi"/>
+    <variable scope="LOCAL_DATA" type="Real" name="x"/>
+    <variable scope="LOCAL_DATA" type="Real" name="y"/>
+    <mode initial="True" id="0" name="WayPoint1">
+      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.896055 - psi))"/>
+      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
+      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
+      <dai equation="v_out = v"/>
+      <dai equation="psi_out = psi"/>
+      <dai equation="x_out = x"/>
+      <dai equation="y_out = y"/>
+    </mode>
+    <mode initial="False" id="1" name="WayPoint2">
+      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.051650 - psi))"/>
+      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
+      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
+      <dai equation="v_out = v"/>
+      <dai equation="psi_out = psi"/>
+      <dai equation="x_out = x"/>
+      <dai equation="y_out = y"/>
+    </mode>
+    <mode initial="False" id="2" name="WayPoint3">
+      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.938047 - psi))"/>
+      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
+      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
+      <dai equation="v_out = v"/>
+      <dai equation="psi_out = psi"/>
+      <dai equation="x_out = x"/>
+      <dai equation="y_out = y"/>
+    </mode>
+    <mode initial="False" id="3" name="WayPoint4">
+      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
+      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.190289 - psi))"/>
+      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
+      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
+      <dai equation="v_out = v"/>
+      <dai equation="psi_out = psi"/>
+      <dai equation="x_out = x"/>
+      <dai equation="y_out = y"/>
+    </mode>
+    <transition source="0" destination="1" id="0">
+        <guard equation="x&gt;79.7 &amp;&amp; x&lt;80.3 &amp;&amp; y&gt;85.7 &amp;&amp; y&lt;86.3"/>
+    </transition>
+    <transition source="1" destination="2" id="1">
+        <guard equation="x&gt;149.7 &amp;&amp; x&lt;150.3 &amp;&amp; y&gt;129.7 &amp;&amp; y&lt;130.3"/>
+    </transition>
+    <transition source="2" destination="3" id="2">
+        <guard equation=  "x&gt;299.7 &amp;&amp; x&lt;300.3 &amp;&amp; y&gt;239.7 &amp;&amp; y&lt;240.3"/>
+    </transition>
+  </automaton>
+  <composition automata="default_automaton"/>
+  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==0.1&amp;&amp;x&gt;10.0&amp;&amp;x&lt;10.1&amp;&amp;y&gt;20.0&amp;&amp;y&lt;20.1" type="0" name="P2" unsafeSet="x&lt;-1000">
+    <parameters kvalue="2000.0" timehorizon="210.0" timestep="0.01"/>
+  </property>
+</hyxml>
