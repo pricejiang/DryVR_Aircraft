@@ -52,7 +52,7 @@ def get_psi_c(wpx_1, wpy_1, wpx_2, wpy_2):
 
     opp = (wpx_2 - wpx_1)
     adj = (wpy_2 - wpy_1)
-    angle = np.arctan(opp / adj)
+    angle = np.arctan(opp / float(adj))
 
     if angle <  0 and opp > 0 and adj < 0 :
         angle = angle + np.pi
@@ -83,7 +83,7 @@ def TC_Simulate(Mode,initialCondition,time_bound):
     C = 0.002 
     w = 0
     M = 1
-    K = [15, 0.4, np.power(np.e, -6)]
+    K = [15, 0.4, 1e-4]
     v_init = initialCondition[0]
 
     # Parse Mode, in format of "wpx:wpy wpx_n:wpy_n"

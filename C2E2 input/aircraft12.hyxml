@@ -2,117 +2,117 @@
 <!DOCTYPE hyxml>
 <hyxml type="Model">
   <automaton name="aircraft1">
-    <variable scope="LOCAL_DATA" type="Real" name="v"/>
-    <variable scope="LOCAL_DATA" type="Real" name="psi"/>
-    <variable scope="LOCAL_DATA" type="Real" name="x"/>
-    <variable scope="LOCAL_DATA" type="Real" name="y"/>
-    <mode initial="True" id="0" name="WayPoint1">
-      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.593425-psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <variable scope="LOCAL_DATA" type="Real" name="v1"/>
+    <variable scope="LOCAL_DATA" type="Real" name="psi1"/>
+    <variable scope="LOCAL_DATA" type="Real" name="x1"/>
+    <variable scope="LOCAL_DATA" type="Real" name="y1"/>
+    <mode initial="True" id="0" name="WayPoint11">
+      <dai equation="v1_dot = (15.0*(4.0-v1)) - 0.002*v1*v1"/>
+      <dai equation="psi1_dot = 32.2/v1*sin(0.04968*(0.593425-psi1))"/>
+      <dai equation="x1_dot = v1*cos(1.570796 - psi1)"/>
+      <dai equation="y1_dot = v1*sin(1.570796 - psi1)"/>
+      <dai equation="v1_out = v1"/>
+      <dai equation="psi1_out = psi1"/>
+      <dai equation="x1_out = x1"/>
+      <dai equation="y1_out = y1"/>
     </mode>
-    <mode initial="False" id="1" name="WayPoint2">
-      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.740982-psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <mode initial="False" id="1" name="WayPoint12">
+      <dai equation="v1_dot = (15.0*(4.0-v1)) - 0.002*v1*v1"/>
+      <dai equation="psi1_dot = 32.2/v*sin(0.04968*(0.740982-psi1))"/>
+      <dai equation="x1_dot = v1*cos(1.570796 - psi1)"/>
+      <dai equation="y1_dot = v1*sin(1.570796 - psi1)"/>
+      <dai equation="v1_out = v1"/>
+      <dai equation="psi1_out = psi1"/>
+      <dai equation="x1_out = x1"/>
+      <dai equation="y1_out = y1"/>
     </mode>
-    <mode initial="False" id="2" name="WayPoint3">
-      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.04968*(0.980979-psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <mode initial="False" id="2" name="WayPoint13">
+      <dai equation="v1_dot = (15.0*(4.0-v1)) - 0.002*v1*v1"/>
+      <dai equation="psi1_dot = 32.2/v1*sin(0.04968*(0.980979-psi1))"/>
+      <dai equation="x1_dot = v1*cos(1.570796 - psi1)"/>
+      <dai equation="y1_dot = v1*sin(1.570796 - psi1)"/>
+      <dai equation="v1_out = v1"/>
+      <dai equation="psi1_out = psi1"/>
+      <dai equation="x1_out = x1"/>
+      <dai equation="y1_out = y1"/>
     </mode>
-    <mode initial="False" id="3" name="WayPoint4">
-      <dai equation="v_dot = (15.0*(4.0-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.04968*(2.996978-psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <mode initial="False" id="3" name="WayPoint14">
+      <dai equation="v1_dot = (15.0*(4.0-v1)) - 0.002*v1*v1"/>
+      <dai equation="psi1_dot = 32.2/v1*sin(0.04968*(2.996978-psi1))"/>
+      <dai equation="x1_dot = v1*cos(1.570796 - psi1)"/>
+      <dai equation="y1_dot = v1*sin(1.570796 - psi1)"/>
+      <dai equation="v1_out = v1"/>
+      <dai equation="psi1_out = psi1"/>
+      <dai equation="x1_out = x1"/>
+      <dai equation="y1_out = y1"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;132.9 &amp;&amp; x&lt;133.1 &amp;&amp; y &gt;170.9 &amp;&amp; y&lt;171.1"/>
+        <guard equation="x1&gt;132.9 &amp;&amp; x1&lt;133.1 &amp;&amp; y1 &gt;170.9 &amp;&amp; y1&lt;171.1"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;175.9 &amp;&amp; x&lt;176.1 &amp;&amp; y &gt;223.9 &amp;&amp; y&lt;224.1"/>
+        <guard equation="x1&gt;175.9 &amp;&amp; x1&lt;176.1 &amp;&amp; y1 &gt;223.9 &amp;&amp; y1&lt;224.1"/>
     </transition>
     <transition source="2" destination="3" id="2">
-        <guard equation="x&gt;429.9 &amp;&amp; x&lt;430.1 &amp;&amp; y &gt;397.3 &amp;&amp; y&lt;397.5"/>
+        <guard equation="x1&gt;429.9 &amp;&amp; x1&lt;430.1 &amp;&amp; y1 &gt;397.3 &amp;&amp; y1&lt;397.5"/>
     </transition>
   </automaton>
   <automaton name="aircraft2">
-    <variable scope="LOCAL_DATA" type="Real" name="v"/>
-    <variable scope="LOCAL_DATA" type="Real" name="psi"/>
-    <variable scope="LOCAL_DATA" type="Real" name="x"/>
-    <variable scope="LOCAL_DATA" type="Real" name="y"/>
-    <mode initial="True" id="0" name="WayPoint1">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.896055 - psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <variable scope="LOCAL_DATA" type="Real" name="v2"/>
+    <variable scope="LOCAL_DATA" type="Real" name="psi2"/>
+    <variable scope="LOCAL_DATA" type="Real" name="x2"/>
+    <variable scope="LOCAL_DATA" type="Real" name="y2"/>
+    <mode initial="True" id="0" name="WayPoint21">
+      <dai equation="v2_dot = (15.0*(4-v2)) - 0.002*v2*v2"/>
+      <dai equation="psi2_dot = 32.2/v2*sin(0.4*0.1242*(0.896055 - psi2))"/>
+      <dai equation="x2_dot = v2*cos(1.570796 - psi2)"/>
+      <dai equation="y2_dot = v2*sin(1.570796 - psi2)"/>
+      <dai equation="v2_out = v2"/>
+      <dai equation="psi2_out = psi2"/>
+      <dai equation="x2_out = x2"/>
+      <dai equation="y2_out = y2"/>
     </mode>
-    <mode initial="False" id="1" name="WayPoint2">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.051650 - psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <mode initial="False" id="1" name="WayPoint22">
+      <dai equation="v2_dot = (15.0*(4-v)) - 0.002*v2*v2"/>
+      <dai equation="psi2_dot = 32.2/v2*sin(0.4*0.1242*(1.051650 - psi2))"/>
+      <dai equation="x2_dot = v2*cos(1.570796 - psi2)"/>
+      <dai equation="y2_dot = v2*sin(1.570796 - psi2)"/>
+      <dai equation="v2_out = v2"/>
+      <dai equation="psi2_out = psi2"/>
+      <dai equation="x2_out = x2"/>
+      <dai equation="y2_out = y2"/>
     </mode>
-    <mode initial="False" id="2" name="WayPoint3">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(0.938047 - psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <mode initial="False" id="2" name="WayPoint23">
+      <dai equation="v2_dot = (15.0*(4-v2)) - 0.002*v2*v2"/>
+      <dai equation="psi2_dot = 32.2/v2*sin(0.4*0.1242*(0.938047 - psi2))"/>
+      <dai equation="x2_dot = v2*cos(1.570796 - psi2)"/>
+      <dai equation="y2_dot = v2*sin(1.570796 - psi2)"/>
+      <dai equation="v2_out = v2"/>
+      <dai equation="psi2_out = psi2"/>
+      <dai equation="x2_out = x2"/>
+      <dai equation="y2_out = y2"/>
     </mode>
-    <mode initial="False" id="3" name="WayPoint4">
-      <dai equation="v_dot = (15.0*(4-v)) - 0.002*v*v"/>
-      <dai equation="psi_dot = 32.2/v*sin(0.4*0.1242*(1.190289 - psi))"/>
-      <dai equation="x_dot = v*cos(1.570796 - psi)"/>
-      <dai equation="y_dot = v*sin(1.570796 - psi)"/>
-      <dai equation="v_out = v"/>
-      <dai equation="psi_out = psi"/>
-      <dai equation="x_out = x"/>
-      <dai equation="y_out = y"/>
+    <mode initial="False" id="3" name="WayPoint24">
+      <dai equation="v2_dot = (15.0*(4-v)) - 0.002*v2*v2"/>
+      <dai equation="psi2_dot = 32.2/v2*sin(0.4*0.1242*(1.190289 - psi2))"/>
+      <dai equation="x2_dot = v2*cos(1.570796 - psi2)"/>
+      <dai equation="y2_dot = v2*sin(1.570796 - psi2)"/>
+      <dai equation="v2_out = v2"/>
+      <dai equation="psi2_out = psi2"/>
+      <dai equation="x2_out = x2"/>
+      <dai equation="y2_out = y2"/>
     </mode>
     <transition source="0" destination="1" id="0">
-        <guard equation="x&gt;79.7 &amp;&amp; x&lt;80.3 &amp;&amp; y&gt;85.7 &amp;&amp; y&lt;86.3"/>
+        <guard equation="x2&gt;79.7 &amp;&amp; x2&lt;80.3 &amp;&amp; y2&gt;85.7 &amp;&amp; y2&lt;86.3"/>
     </transition>
     <transition source="1" destination="2" id="1">
-        <guard equation="x&gt;149.7 &amp;&amp; x&lt;150.3 &amp;&amp; y&gt;129.7 &amp;&amp; y&lt;130.3"/>
+        <guard equation="x2&gt;149.7 &amp;&amp; x2&lt;150.3 &amp;&amp; y2&gt;129.7 &amp;&amp; y2&lt;130.3"/>
     </transition>
     <transition source="2" destination="3" id="2">
-        <guard equation=  "x&gt;299.7 &amp;&amp; x&lt;300.3 &amp;&amp; y&gt;239.7 &amp;&amp; y&lt;240.3"/>
+        <guard equation=  "x2&gt;299.7 &amp;&amp; x2&lt;300.3 &amp;&amp; y2&gt;239.7 &amp;&amp; y2&lt;240.3"/>
     </transition>
   </automaton>
   <composition automata="aircraft1;aircraft2"/>
-  <property initialSet="WayPoint1: v==4.0&amp;&amp;psi==0.1&amp;&amp;x&gt;30.0&amp;&amp;x&lt;30.1&amp;&amp;y&gt;10.0&amp;&amp;y&lt;10.1" type="0" name="P1" unsafeSet="x&lt;-100">
+  <property initialSet="WayPoint11_WayPoint21: v1==4.0&amp;&amp;psi1==0.1&amp;&amp;x1&gt;30.0&amp;&amp;x1&lt;30.1&amp;&amp;y1&gt;10.0&amp;&amp;y1&lt;10.1&amp;&amp;v2==4.0&amp;&amp;psi2==0.1&amp;&amp;x2&gt;10.0&amp;&amp;x2&lt;10.1&amp;&amp;y2&gt;20.0&amp;&amp;y2&lt;20.1" type="0" name="P12" unsafeSet="x&lt;-100">
     <parameters kvalue="2000.0" timehorizon="210.0" timestep="0.01"/>
   </property>
 </hyxml>

@@ -4,7 +4,7 @@ import os
 
 def main(argv):
     i = 1
-    epsilon = 1
+    epsilon = 1 # Guard width
     wp = ""
     wp_prev = ""
     data = {}
